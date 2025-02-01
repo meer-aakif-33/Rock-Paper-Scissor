@@ -14,7 +14,7 @@ body {
 .game-container {
     text-align: center;
     background: rgba(255, 255, 255, 0.15);
-    padding: 50px 200px;
+    padding: 40px 150px;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
@@ -118,9 +118,9 @@ body {
 /* Confirmation Dialog */
 .confirmation-container {
     background: rgba(0, 0, 0, 0.6);
-    padding: 20px;
+    padding: 15px;
     border-radius: 12px;
-    margin-top: 30px;
+    margin-top: 20px;
     border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
