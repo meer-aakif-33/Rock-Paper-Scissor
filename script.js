@@ -67,6 +67,7 @@ function updateScoreElement() {
     document.querySelector('.js-score').
         innerHTML = `Wins: ${score.wins}, Losses: ${score.loses}, Ties: ${score.ties}`;
 }
+
 let isAutoPlaying = false;
 let intervalId;
 
@@ -76,10 +77,81 @@ function autoPlay() {
         const playerMove = pickComputerMove();
         playGame(playerMove);
     }, 1000); 
+
     isAutoPlaying = true;
+    document.querySelector('.js-autoplay-button').textContent = 'Stop Playing'
 
     }else {
+        document.querySelector('.js-autoplay-button').textContent = 'Auto Play'
         clearInterval(intervalId);
         isAutoPlaying = false;
     }
 }
+
+
+//Adding EventListeners
+document.querySelector('.js-rock-button')
+    .addEventListener('click', () => {
+    playGame('Rock');
+    });
+
+document.querySelector('.js-paper-button')
+    .addEventListener('click', () => {
+    playGame('Rock');
+});
+document.querySelector('.js-scissors-button')
+    .addEventListener('click', () => {
+    playGame('Rock');
+});
+
+document.querySelector('.js-autoplay-button')
+    .addEventListener('click', () => {
+        autoPlay();
+    })
+document.querySelector('.js-reset-score-button')
+    .addEventListener(('click'), () => {
+        confirmResetScore();
+    })
+
+const rockButton = document.querySelector('.js-rock-button');
+console.log(rockButton); // Check if it logs the correct button element
+rockButton.addEventListener('click', () => {
+    playGame('Rock');
+});
+
+document.body.addEventListener('keydown', (event) => {
+    if (event.key === 'r') {
+        playGame('Rock');
+    }else if (event.key === 'p') {
+        playGame('Paper');
+    }else if (event.key === 's') {
+        playGame('Scissor')
+    }else if (event.key === 'a') {
+        autoPlay();
+    }else if (event.key === 'Backspace') {
+        confirmResetScore();
+    }
+})
+
+
+function confirmResetScore(){
+    const confirmationContainer = document.querySelector('.js-confirmation-container');
+    confirmationContainer.style.display = 'block'
+
+    document.querySelector('.js-confirm-yes').addEventListener('click', () => {
+        resetScore();
+        confirmationContainer.style.display = 'none'
+    })
+    document.querySelector('.js-confirm-no').addEventListener('click', () => {
+        confirmationContainer.style.display = 'none'
+    })
+}
+
+/*
+function confirmResetScoree() {
+    const userConfirmed = confirm('Are you sure you want to reset the score?');
+    if (userConfirmed) {
+        resetScore();
+    }
+}
+*/

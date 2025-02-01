@@ -1,40 +1,145 @@
+/* Gradient Background */
 body {
-    background-color: rgb(25,25,25);
+    background: linear-gradient(135deg, #0e0e0e, #3c3c3c);
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
+
+/* Glassmorphism Card */
+.game-container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 50px 200px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.2);
+    width: 550px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Title Styling */
 .title {
-    font-size: 30px;
-    font-weight: bold;   
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
 }
 
-.move-icon {
-    height: 50px;
+/* Buttons Layout */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 30px;
 }
+
+/* Move Buttons */
 .move-button {
-    background-color: transparent;
-    border: 3px solid white;
-    width: 120px;
-    height: 120px;
-    border-radius: 60px;
-    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 4px solid white;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
     cursor: pointer;
-}    
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
 
+/* Hover Effect - Neon Glow */
+.move-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.04);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Move Icon Size */
+.move-icon {
+    height: 80px;
+}
+
+/* Result Display */
 .result {
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     margin-top: 50px;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    display: inline-block;
+    backdrop-filter: blur(5px);
 }
+
+/* Score Display */
 .score {
-    margin-top: 60px;
-    
+    margin-top: 30px;
+    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
 }
+.js-moves{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+/* Control Buttons */
 .reset-score-button,
 .auto-play-button {
-    background-color: white;
+    background: white;
     border: none;
-    font-size: 15px;
-    padding: 8px 15px;
+    font-size: 17px;
+    padding: 10px 20px;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    margin-top: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Button Hover Effect */
+.reset-score-button:hover,
+.auto-play-button:hover {
+    background: rgb(200, 200, 200);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+/* Confirmation Dialog */
+.confirmation-container {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Confirmation Buttons */
+.confirm-button {
+    background: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+/* Confirmation Hover */
+.confirm-button:hover {
+    background: rgb(200, 200, 200);
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }

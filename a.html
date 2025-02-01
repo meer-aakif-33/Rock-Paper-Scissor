@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Filter</title>
+    <link rel="stylesheet" href="a.css">
+</head>
+<body>
+    <div class="tutor-course-filter-wrapper">
+        <!-- Filter Section -->
+        <div class="filter-container">
+            <div class="filter-row">
+                <select name="instructor" class="filter-select" id="instructor">
+                    <!-- Options dynamically generated -->
+                </select>
+
+                <select name="stream" class="filter-select" id="stream">
+                    <!-- Options dynamically generated -->
+                </select>
+
+                <select name="duration" class="filter-select" id="duration">
+                    <!-- Options dynamically generated -->
+                </select>
+
+                <select name="day_slot" class="filter-select" id="daySlot">
+                    <!-- Options dynamically generated -->
+                </select>
+
+                <select name="time_slot" class="filter-select" id="timeSlot">
+                    <!-- Options dynamically generated -->
+                </select>
+
+                <div class="filter-buttons">
+                    <button type="button" class="search-btn" id="searchBtn">Search</button>
+                    <button type="button" class="reset-btn" id="resetBtn">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="course-results"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
